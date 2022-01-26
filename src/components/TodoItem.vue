@@ -5,7 +5,7 @@ interface TodoItemInc {
   goal: number, //Want to harvest the number of tomatoes
 }
 
-import TodoItem from "../interfaces/todoItem"
+// import TodoItem from "../interfaces/todoItem"
 
 defineProps<TodoItemInc>()
 </script>

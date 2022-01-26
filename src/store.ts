@@ -1,11 +1,5 @@
 import { createStore } from "vuex"
-import TodoItem from "./interfaces/todoItem"
-
-let todoItem1:TodoItem = {
-  title: 'asd',
-  time: 15,
-  goal: 2
-}
+import TodoItem, {defaultValue as originTodoItem} from "./interfaces/todoItem"
 
 export default createStore({
   state: {
@@ -13,12 +7,14 @@ export default createStore({
       time: 25 * 60,
       interval: null,
     },
-    todoList: [todoItem1]
+    todoList: [originTodoItem]
   },
   mutations: {
     
   },
   actions: {
-    
+    AddItem: function({state}, payload){
+      state.todoList.push(payload)
+    }
   }
 })
