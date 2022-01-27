@@ -30,12 +30,18 @@ function cancelAdd() {
   <div class="dialog" v-show="dialogVisible">
     添加任务？
     <form @submit="confirmAdd">
-      任务名称：
-      <input type="text" v-model.value="toAddItem.title" />
-      目标：
-      <input type="number" v-model.value="toAddItem.goal" />个
-      一次
-      <input type="number" v-model.value="toAddItem.time" />分钟
+      <label>
+        任务名称：
+        <input type="text" v-model.value="toAddItem.title" />
+      </label>
+      <label>
+        目标：
+        <input type="number" v-model.value="toAddItem.goal" />个
+      </label>
+      <label>
+        一次
+        <input type="number" v-model.value="toAddItem.time" />分钟
+      </label>
       <button type="submit">Y</button>
       <button type="button" @click="cancelAdd">N</button>
     </form>
@@ -55,5 +61,24 @@ function cancelAdd() {
 .add-icon img {
   width: 100%;
   height: 100%;
+}
+
+.dialog {
+  position: fixed;
+  top: 35%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 80vw;
+  height: 60vw;
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog form {
+  display: flex;
+  flex-direction: column;
 }
 </style>

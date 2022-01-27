@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 interface TodoItemInc {
   title: string,
   time: number, //The time to harvest a tomato
@@ -6,7 +7,6 @@ interface TodoItemInc {
 }
 
 // import TodoItem from "../interfaces/todoItem"
-
 defineProps<TodoItemInc>()
 </script>
 
@@ -14,10 +14,12 @@ defineProps<TodoItemInc>()
   <div class="content">
     <div>
       <p>{{ title }}</p>
-      <p>目标：{{goal}}个 一次{{time}}分钟</p>
+      <p>目标：{{ goal }}个 一次{{ time }}分钟</p>
     </div>
     <div>
-      <button>开始</button>
+      <router-link to="/tree/1">
+        <button>开始</button>
+      </router-link>
     </div>
   </div>
 </template>
