@@ -16,7 +16,7 @@ export default createRouter({
       component: Garden
     },
     {
-      path: '/tree/:treeId',
+      path: '/tree/:no',
       name: 'tree',
       component: Tree
     }
