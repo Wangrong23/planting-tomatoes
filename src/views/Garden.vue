@@ -4,6 +4,14 @@ import AddOne from '../components/AddOne.vue';
 </script>
 
 <template>
-  <TodoList />
+  <div class="garden-wrapper">
+    <TodoList />
+  </div>
   <AddOne />
 </template>
+
+<style scoped>
+.garden-wrapper {
+  height: 100%;
+}
+</style>

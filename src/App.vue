@@ -26,7 +26,7 @@ body {
   height: 100vh;
   position: relative;
   box-sizing: border-box;
-  padding: 12px;
+  /* padding: 12px; */
   overflow-x: hidden;
   overflow-y: auto;
 }
